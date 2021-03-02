@@ -20,4 +20,9 @@ Route::get('/', function () {
 
 
 Route::get('/users', [TesteController::class, 'listAllUsers'])->name('users.listAll');
+Route::get('/users/new', [TesteController::class, 'formAddUser'])->name('users.formAddUser');
+Route::get('/users/editar/{user}', [TesteController::class, 'formEditUser'])->name('users.formEditUser');
 Route::get('/users/{user}', [TesteController::class, 'listUser'])->name('users.list');
+Route::post('/user/store', [TesteController::class, 'storeUser'])->name('user.store');
+Route::put('/users/edit/{user}', [TesteController::class, 'edit'])->name('user.edit');
+Route::delete('/users/destroy/{user}', [TesteController::class, 'destroy'], 'destroy')->name('user.destroy');
