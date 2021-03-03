@@ -18,9 +18,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/courses', function () {
-    return view('welcome');
+    return view('site.courses');
 })->name('courses');
 
 Route::get('/contact', function () {
-    return view('welcome');
+    return view('site.contact');
 })->name('contact');
